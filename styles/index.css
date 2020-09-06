@@ -1,0 +1,238 @@
+@font-face{
+    src: url('./fonts/get-schwifty.ttf');
+    font-family: 'Rick and Morty';
+}
+
+
+body{
+    font-family: 'Alata', sans-serif;
+    background:black;
+    color:rgb(0, 177, 192);
+    text-shadow: 0px 0px 10px rgb(158, 203, 60);
+
+}
+
+h1{
+    text-align: center;
+}
+
+button{
+    background: rgb(0, 177, 192);
+    font-family: 'Alata', sans-serif;
+    font-family: 26px;
+    padding:1%;
+    margin:5%;
+    border-radius: 5%;
+    box-shadow: 0px 0px 10px rgb(158, 203, 60);
+}
+
+.center{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.Rick-and-Morty{
+    font-family: 'Rick and Morty';
+    font-size: 70px;
+    transform: scale(0);
+    animation: scale-apear 2s  .3s  forwards ;
+    -webkit-animation: scale-apear 2s  .3s  forwards ;
+    -o-animation: scale-apear 2s  .3s  forwards ;
+}
+
+
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.grid-text{
+    grid-column: 1/13;
+    text-align: center;
+    transition: all .6s ;
+}
+
+.grid-img{
+    grid-column: 1/13;
+}
+
+.character{
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 0px 20px rgb(158, 203, 60);
+    transition: all .6s;
+}
+
+#content{
+    opacity: 0;
+    transform: translateY(15px);
+    animation: body-apear 2s 2.3s forwards;
+    -webkit-animation: body-apear 2s 2.3s forwards;
+    -o-animation: body-apear 2s 2.3s forwards;
+
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    padding-top: 200px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,.6);
+}
+.hide{
+    opacity: 0;
+    transform: translateX(100px);
+}
+@keyframes scale-apear{
+    from{transform:scale(0);}
+    to{transform:scale(1);}
+}
+
+@-webkit-keyframes scale-apear{
+    from{transform:scale(0);}
+    to{transform:scale(1);}
+}
+
+@-o-keyframes scale-apear{
+    from{transform:scale(0);}
+    to{transform:scale(1);}
+}
+@keyframes body-apear{
+    from{
+        opacity: 0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform:translateY(0);
+    }
+}
+
+@-webkit-keyframes body-apear{
+    from{
+        opacity: 0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform:translateY(0);
+    }
+}
+
+@-o-keyframes body-apear{
+    from{
+        opacity: 0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform:translateY(0);
+    }
+}
+
+
+@media (max-width: 575.98px) { 
+    .character{
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .grid-text{
+        grid-column: 2/7;
+        text-align: left;
+    }
+    .grid-img{
+        grid-column: 7/13  ;
+    }
+}
+@media (min-width: 1200px) {
+    .grid-text{
+        grid-column: 2/7;
+        text-align: left;
+    }
+    .grid-img{
+        grid-column: 7/13  ;
+    }
+}
+
+/*Elementos copiados*/
+.loader {
+    font-size: 10px;
+    margin: 50px auto;
+    text-indent: -9999em;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    background: #ffffff;
+    background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    position: relative;
+    -webkit-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .loader:before {
+    width: 50%;
+    height: 50%;
+    background: #ffffff;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+  .loader:after {
+    background-color: rgba(0,0,0,0.8);
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  @-webkit-keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
